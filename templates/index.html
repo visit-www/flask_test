@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Hello</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='assets/say-hi.png') }}" />
+    <form action="greet" method="post">
+        
+        <div class="contents">
+            {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+        <br>
+            <label for="name_input">Enter your name:</label>
+            <input type="text" id="name_input" name="name_input">
+            <input type="submit" value="Greet" id="greet">
+        </div>
+    </form>
+</body>
+</html>
