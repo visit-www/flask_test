@@ -1,53 +1,78 @@
-body{
-    background-color: rgb(231, 234, 226);
+/* Global Styles */
+
+body {
+    background-color: #e7eae2; /* Use hex code instead of rgb */
     text-align: center;
-}
-p{
-    color:black;
+  }
+  
+  p {
+    color: #000; /* Use hex code instead of color name */
     font-size: 1.2em;
     font-family: sans-serif;
-    margin:2px;
-}
-.contents{
+    margin: 2px 0; /* Add 0 to margin to avoid unexpected behavior */
+  }
+  
+  /* Container Styles */
+  
+  .contents {
     display: flex;
     flex-direction: column;
     min-width: 30em;
     max-width: fit-content;
-    gap:20px;
+    gap: 20px;
     align-items: center;
+    justify-content: center;
     border-radius: 20px;
-}
-img{
-    margin:60px 0px 30px 0px;
-    width:250px;
-    border-radius: 10px;
-}
-input{
-    border:none;
-    width: 20rem;
-    height: 5em;
-    
-}
-input:focus{
-    border:10px;
-    
-    
-    width: 20rem;
-    height: 5em;
-}
-#greet{
+    padding: 20px; /* Add padding to create some breathing room */
+    background-color: #fff; /* Add background color to container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    margin:0 auto; /* to esnure there is horizontal centring (sinxe using flex direction columns kustify-centere wont wor*/
 
-    background-color: aqua;
-    width:12rem;
+  }
+  
+  /* Image Styles */
+  
+  img {
+    margin: 60px 0 30px 0;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover; /* Add object-fit to ensure image is scaled properly */
+  }
+  
+  /* Input Styles */
+  
+  input {
+    display: block;
+    border: none;
+    background-color: #e7eae2;
+    width: 20rem;
+    height: 5em;
+    padding: 10px; /* Add padding to input field */
+    font-size: 1em; /* Add font size to input field */
+  }
+  
+  input:focus {
+    border: 1px solid #333; /* Change border style on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add box shadow on focus */
+  }
+  
+  /* Button Styles */
+  
+  #greet {
+    display: block;
+    background-color: #00bfff; /* Use hex code instead of color name */
+    width: 12rem;
     height: 3em;
     border-radius: 10px;
-    border-color: rgb(255, 247, 0);
-}
-#greet:hover{
-    background-color: yellow;
-    
-}
-#greet:active{
-    background-color: greenyellow;
-    box-shadow: 4px 0px 4px 0px;
-}
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer */
+  }
+  
+  #greet:hover {
+    background-color:  #afcad2; /* Use hex code instead of color name */
+  }
+  
+  #greet:active {
+    background-color: #5fca49; /* Use hex code instead of rgb */
+    box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.2); /* Add box shadow on active */
+  }

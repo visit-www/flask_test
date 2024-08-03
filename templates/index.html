@@ -9,11 +9,12 @@
 <body>
     <img src="{{ url_for('static', filename='assets/say-hi.png') }}" />
     <form action="greet" method="post">
-        
-        <div class="contents">
-            {% for message in get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>
         {% endfor %}
+        
+        <div class="contents">
+            
         <br>
             <label for="name_input">Enter your name:</label>
             <input type="text" id="name_input" name="name_input">
